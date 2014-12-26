@@ -6,3 +6,9 @@ git config --global user.name "Your Name" // 确定作者名称
 git config --global user.email "you@example.com" // 确定作者邮件账户信息
 git commit --amend --reset-author // 暂时无法确定用法
 git log; git log --pretty=oneline // 显示提交日志
+-----------------------------------
+版本控制：
+git reset --hard HEAD^^ // 退回到前两个版本处
+git reflog  // 显示命令历史，从中得到commit_id
+git reset --hard commit_id // 可回到指定id的版本
+
