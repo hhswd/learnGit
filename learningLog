@@ -11,4 +11,10 @@ git log; git log --pretty=oneline // 显示提交日志
 git reset --hard HEAD^^ // 退回到前两个版本处
 git reflog  // 显示命令历史，从中得到commit_id
 git reset --hard commit_id // 可回到指定id的版本
-
+------------------------------------
+工作区与暂存区的控制：
+git reset HEAD file // 直接把file从暂存区丢弃，与工作区没有关系
+git checkout -- file // 恢复工作区至暂存区的状态,若暂存区没有该文件，则恢复工作区到分支的版本库状态（对所有文件都会有影响？）
+                     // 若暂存区和分支中都没有file，则无法恢复。
+git add // 可以重复添加工作区的同一个file到暂存区，覆盖暂存区旧的file
+------------------------------------ 
