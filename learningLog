@@ -1,0 +1,8 @@
+git init // 初始化git仓库
+git add 
+git commit -m "wrote..."
+git status
+git config --global user.name "Your Name" // 确定作者名称
+git config --global user.email "you@example.com" // 确定作者邮件账户信息
+git commit --amend --reset-author // 暂时无法确定用法
+
