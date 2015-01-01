@@ -35,3 +35,4 @@ github的设置：
 7. Debug :  ssh -v git@github.com
 8. 继续debug : ssh-add -l 列出密钥清单，发现没有github_rsa
    加入github_rsa : ssh-add github_rsa
+9.
