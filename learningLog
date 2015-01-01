@@ -26,13 +26,21 @@ github.global.ssl.fastly.net
 github的设置：
 1. 客户端生成密钥对：ssh-keygen -t <type> -C <commit>
 2. 生成github_rsa和github_rsa.pub，改名字的时候因用全路径
+
 3. 复制github_rsa.pub到github账户下
 4. 设置github邮箱为隐藏，采用hhswd@users.noreply.github.com邮箱
+
 5. 设置客户端的用户名和邮箱：git config user.name 'hhswd'; git config user.email 'hhswd@users.noreply.github.com';
    如果是所有仓库都改动，则：git config --globle user.name;
+
 6. 尝试从客户端ssh服务器：ssh -T git@github.com
    出现错误：permision denied<public key>
 7. Debug :  ssh -v git@github.com
+
 8. 继续debug : ssh-add -l 列出密钥清单，发现没有github_rsa
    加入github_rsa : ssh-add github_rsa
 9. ssh -T git@github.com   Succeed!
+
+10. git clone git@github.com:hhswd/learnGit.git
+
+
