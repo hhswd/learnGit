@@ -41,5 +41,23 @@ github的设置：
    加入github_rsa : ssh-add github_rsa
 9. ssh -T git@github.com   Succeed!
 
-10. git clone git@github.com:hhswd/learnGit.git
+------------------------------------
+Host的设置：
+位置：~/.ssh/config
+参数：
+Host github
+HostName github.com
+user git
+PreferredAuthentication publickey
+IdentityFile ~/.ssh/github_rsa
+
+设置ssh的别名连接：
+A. 如果local repository还未关联remote repository，则进入local repository后执行：
+   git remote add origin Host:username/gitname
+
+B. 如果local repository已经关联remote,则进入local后执行：
+   git remote set-url origin Host:username/gitname
+
+
+
 
