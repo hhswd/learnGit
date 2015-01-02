@@ -58,6 +58,22 @@ A. 如果local repository还未关联remote repository，则进入local reposito
 B. 如果local repository已经关联remote,则进入local后执行：
    git remote set-url origin Host:username/gitname
 
+=====================================
+github版本控制的逻辑分析：
+
+[文件内部行为]
+
+1.local比origin的版本落后（即local的最近一次同步的origin版本是较旧的）
+2.local比origin的版本落后，且文件没有改动过
+   
+
+
+
+
+
+
+
+
 
 
 
